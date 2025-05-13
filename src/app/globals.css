@@ -23,4 +23,72 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior:smooth;
+  
 }
+
+#marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+#marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: serif;
+  font-size: 2rem;
+  color: rgb(42, 90, 162);
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.custom-search input {
+  border:2px 2px !important;
+  border-color:grey;
+  color: black;
+  
+}
+
+.custom-search input::placeholder {
+  color: rgba(20, 19, 19, 0.634) !important;
+}
+
+
+#FeatureButton{
+  background-color:black;
+  color:white;
+  border-radius:1.5rem;
+  padding:0.5rem 1.5rem;
+  transition:"backround-color 0.3s";
+
+}
+#FeatureButton:hover{
+  background-color:rgb(8, 102, 197);
+}
+
+@keyframes floatBox {
+  0%   { background-color: red; left: 0px; top: 0px; }
+  25%  { background-color: yellow; left: 20px; top: 0px; }
+  50%  { background-color: blue; left: 20px; top: 20px; }
+  75%  { background-color: green; left: 0px; top: 20px; }
+  100% { background-color: red; left: 0px; top: 0px; }
+}
+
+.animate-price {
+  position: relative;
+  animation: floatBox 5s linear 2s infinite alternate;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
